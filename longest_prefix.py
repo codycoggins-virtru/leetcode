@@ -9,14 +9,15 @@ class Solution:
         done: bool = False
         while not done:
             if i >= len(strs[0]):
-                break
-            char: str = strs[0][i]
-            for s in strs:
-                if i >= len(s) or s[i] != char:
-                    done = True
-                    break
-            if not done:
-                i += 1
+                done = True
+            else:
+                char: str = strs[0][i]
+                for s in strs:
+                    if i >= len(s) or s[i] != char:
+                        done = True
+                        break
+                if not done:
+                    i += 1
         return strs[0][0:i]
 
 
