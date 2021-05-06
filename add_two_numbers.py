@@ -32,3 +32,4 @@ class Solution:
             nodes[i].next = nodes[i-1]
             # print(f'{i}: {nodes}')
         return nodes[-1]
+
